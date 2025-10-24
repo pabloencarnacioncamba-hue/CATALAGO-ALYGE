@@ -55,6 +55,6 @@ document.getElementById("buscador").addEventListener("input", e => {
 
 // Enviar mensaje por WhatsApp
 function consultar(nombre) {
-  const url = `https://wa.me/${5213318192003}?text=Hola,%20quiero%20consultar%20la%20disponibilidad%20del%20artículo:%20${nombre}`;
+  const url = `https://wa.me/${NUMERO_WHATSAPP}?text=Hola,%20quiero%20consultar%20la%20disponibilidad%20del%20artículo:%20${nombre}`;
   window.open(url, "_blank");
 }
