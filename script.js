@@ -1,5 +1,5 @@
 const API_URL = https://script.google.com/macros/s/AKfycbxa2rjMhKahAMtu2G0IVshgOq7AEDSNZ6t82GnXDwPMz_SfBKgCfJkNeV88zqcD8lhS/exec; // ?? reemplaza con la URL /exec
-const NUMERO_WHATSAPP = "5213312345678"; // ?? reemplaza con tu número real
+const NUMERO_WHATSAPP = "5213318192003"; // ?? 
 
 let productos = [];
 let categorias = [];
@@ -47,3 +47,4 @@ document.getElementById("buscador").addEventListener("input", e => {
   const filtrados = productos.filter(p => p.Nombre.toLowerCase().includes(texto));
   mostrarProductos(filtrados);
 });
+
