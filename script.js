@@ -1,5 +1,5 @@
 const API_URL = https://script.google.com/macros/s/AKfycbxa2rjMhKahAMtu2G0IVshgOq7AEDSNZ6t82GnXDwPMz_SfBKgCfJkNeV88zqcD8lhS/exec; // ?? reemplaza con la URL /exec
-const NUMERO_WHATSAPP = "5213312345678"; // ?? reemplaza con tu n˙mero real
+const NUMERO_WHATSAPP = "5213312345678"; // ?? reemplaza con tu n√∫mero real
 
 let productos = [];
 let categorias = [];
@@ -14,7 +14,7 @@ fetch(API_URL)
 
 function mostrarCategorias() {
   const contenedor = document.getElementById("categorias");
-  categorias = [...new Set(productos.map(p => p.CategorÌa))];
+  categorias = [...new Set(productos.map(p => p.Categor√≠a))];
   contenedor.innerHTML = categorias.map(c => `<span class="categoria" onclick="filtrar('${c}')">${c}</span>`).join('');
 }
 
@@ -24,7 +24,7 @@ function mostrarProductos(lista) {
     <div class="card">
       <img src="${p.Imagen_URL}" alt="${p.Nombre}" />
       <h3>${p.Nombre}</h3>
-      <p>${p.DescripciÛn}</p>
+      <p>${p.Descripci√≥n}</p>
       <strong>$${p.Precio}</strong>
       <br>
       <button onclick="consultar('${encodeURIComponent(p.Nombre)}')">Consultar</button>
@@ -33,12 +33,12 @@ function mostrarProductos(lista) {
 }
 
 function filtrar(cat) {
-  const filtrados = productos.filter(p => p.CategorÌa === cat);
+  const filtrados = productos.filter(p => p.Categor√≠a === cat);
   mostrarProductos(filtrados);
 }
 
 function consultar(nombre) {
-  const url = `https://wa.me/$5213318192003?text=Hola,%20quiero%20consultar%20la%20disponibilidad%20del%20artÌculo:%20${nombre}`;
+  const url = `https://wa.me/$5213318192003?text=Hola,%20quiero%20consultar%20la%20disponibilidad%20del%20art√≠culo:%20${nombre}`;
   window.open(url, "_blank");
 }
 
